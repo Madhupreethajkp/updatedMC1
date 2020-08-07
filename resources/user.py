@@ -22,10 +22,11 @@ from urllib.parse import quote
 import webbrowser
 mail = Mail(app1)
 today = date.today()
-parser = reqparse.RequestParser()
+
 
 class UserRegister(Resource):
     TABLE_NAME = 'user'
+    parser = reqparse.RequestParser()
 
 
     parser.add_argument('first_name',
